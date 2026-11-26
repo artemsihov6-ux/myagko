@@ -1,0 +1,45 @@
+{
+  "name": "myagko-cleaning",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "db:init": "node --env-file-if-exists=.env scripts/db-init.mjs",
+    "db:local": "node scripts/local-postgres.mjs",
+    "test": "tsx --test tests/domain.test.ts",
+    "test:e2e": "playwright test",
+    "db:maintenance": "node --env-file-if-exists=.env scripts/db-maintenance.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/onest": "^5",
+    "@react-three/drei": "10.7.9",
+    "@react-three/fiber": "9.8.2",
+    "lucide-react": "^1.80.0",
+    "motion": "14.14.0",
+    "next": "16.4.6",
+    "pg": "8.23.1",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "sharp": "0.35.5",
+    "three": "0.187.0",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.1",
+    "@types/node": "^24",
+    "@types/pg": "^8",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/three": "^0.187.0",
+    "embedded-postgres": "19.0.0-beta.20",
+    "tsx": "^4",
+    "typescript": "^5.9"
+  }
+}
